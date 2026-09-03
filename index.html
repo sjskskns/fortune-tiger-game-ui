@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Tiger - Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Topo com saldo -->
+        <div class="header">
+            <div class="balance-section">
+                <div class="balance-box">
+                    <span class="label">Saldo</span>
+                    <span class="value" id="balance">R$ 1000,00</span>
+                </div>
+                <div class="balance-box">
+                    <span class="label">Ganho</span>
+                    <span class="value" id="win">R$ 0,00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Área dos Slots -->
+        <div class="slots-area">
+            <div class="slot-machine">
+                <div class="slot-reel" id="reel1">
+                    <div class="slot-symbol"><img src="assets/symbols/0.png" alt="Wild"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/1.png" alt="Orange"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/2.png" alt="Gold Pot"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/3.png" alt="Bracelet"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/4.png" alt="Coins"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/5.png" alt="Red Card"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/6.png" alt="Blue Straw"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/7.png" alt="Orange"></div>
+                </div>
+
+                <div class="slot-reel" id="reel2">
+                    <div class="slot-symbol"><img src="assets/symbols/0.png" alt="Wild"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/1.png" alt="Orange"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/2.png" alt="Gold Pot"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/3.png" alt="Bracelet"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/4.png" alt="Coins"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/5.png" alt="Red Card"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/6.png" alt="Blue Straw"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/7.png" alt="Orange"></div>
+                </div>
+
+                <div class="slot-reel" id="reel3">
+                    <div class="slot-symbol"><img src="assets/symbols/0.png" alt="Wild"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/1.png" alt="Orange"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/2.png" alt="Gold Pot"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/3.png" alt="Bracelet"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/4.png" alt="Coins"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/5.png" alt="Red Card"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/6.png" alt="Blue Straw"></div>
+                    <div class="slot-symbol"><img src="assets/symbols/7.png" alt="Orange"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles de aposta -->
+        <div class="controls-section">
+            <div class="bet-controls">
+                <label>Coin Size (CS):</label>
+                <div class="cs-buttons">
+                    <button class="btn-cs active" data-cs="0.02">0.02</button>
+                    <button class="btn-cs" data-cs="0.1">0.1</button>
+                    <button class="btn-cs" data-cs="0.2">0.2</button>
+                </div>
+            </div>
+
+            <div class="bet-controls">
+                <label>Multiplicador (ML):</label>
+                <div class="ml-buttons">
+                    <button class="btn-ml active" data-ml="1">1x</button>
+                    <button class="btn-ml" data-ml="2">2x</button>
+                    <button class="btn-ml" data-ml="3">3x</button>
+                    <button class="btn-ml" data-ml="5">5x</button>
+                    <button class="btn-ml" data-ml="10">10x</button>
+                </div>
+            </div>
+
+            <div class="bet-info">
+                <span>Aposta Total: <strong id="totalBet">R$ 0,36</strong></span>
+            </div>
+        </div>
+
+        <!-- Botão de Spin -->
+        <div class="spin-button-container">
+            <button id="spinBtn" class="spin-btn">GIRAR</button>
+            <button id="autoBtn" class="auto-btn">AUTO GIRAR</button>
+        </div>
+
+        <!-- Status -->
+        <div class="status-bar" id="status">Pronto para girar</div>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

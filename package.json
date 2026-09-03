@@ -1,0 +1,13 @@
+{
+  "name": "fortune-tiger-game-ui",
+  "version": "1.0.0",
+  "description": "Fortune Tiger Game UI with animations and button styles",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": ["fortune-tiger", "slot-game", "pgsoft"],
+  "author": "sjskskns",
+  "license": "MIT"
+}
